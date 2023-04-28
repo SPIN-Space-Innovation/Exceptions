@@ -21,13 +21,11 @@
 # SOFTWARE.
 
 cmake_minimum_required(VERSION 3.10)
-project(SPIN-Errors VERSION 0.1.0)
+project(SPIN-Exceptions VERSION 0.1.5)
 
-set(CXX_STANDARD 23)
+include_directories("${CMAKE_CURRENT_LIST_DIR}/include/public")
 
-include_directories("${CMAKE_CURRENT_LIST_DIR}/include")
-
-add_library("SPIN-Errors" INTERFACE)
+add_library("SPIN-Exceptions" INTERFACE)
 
 install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/"
         DESTINATION "include"
