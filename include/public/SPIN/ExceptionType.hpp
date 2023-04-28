@@ -36,15 +36,15 @@ namespace SPIN
      * 
      * @examplecode
      * @code{.cpp}
-     * std::expected<double, SPIN::Exception> GetTemperature()
+     * std::expected<double, SPIN::ExceptionType> GetTemperature()
      * {
-     *     return std::unexpected(SPIN::Exception::NotSupportedException);
+     *     return std::unexpected(SPIN::ExceptionType::NotSupportedException);
      * }
      * @endcode
      * 
      * @author richardbar
      */
-    enum class Exception : uint8_t
+    enum class ExceptionType : uint8_t
     {
         SystemException = 0x80, /*!< Serves as the base class for system exceptions namespace. */
         AccessViolationException, /*!< The exception that is thrown when there is an attempt to read or write protected memory. */
