@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['unauthorizedaccessexception_0',['UnauthorizedAccessException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4a9746110d485640978f7b231cc206789e',1,'SPIN']]],
-  ['uriformatexception_1',['UriFormatException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4a04ec96265c6958b693d4026a6c6ce82d',1,'SPIN']]]
+  ['spin_0',['SPIN',['../namespaceSPIN.html',1,'']]],
+  ['stackoverflowexception_1',['StackOverflowException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4a4408159e8486b563ecf49799c56de3b9',1,'SPIN']]],
+  ['systemexception_2',['SystemException',['../classSPIN_1_1SystemException.html',1,'SPIN::SystemException'],['../classSPIN_1_1SystemException.html#aedcc7670c5628730e1a22a820ecdd94d',1,'SPIN::SystemException::SystemException()'],['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4aac28f48e2bb07d7a7d4dd5b7b1f8c1f1',1,'SPIN::SystemException()']]],
+  ['systemexception_2ecpp_3',['SystemException.cpp',['../SystemException_8cpp.html',1,'']]],
+  ['systemexception_2ehpp_4',['SystemException.hpp',['../SystemException_8hpp.html',1,'']]]
 ];

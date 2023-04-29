@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['endofstreamexception_0',['EndOfStreamException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4aecdf1719f0e262e67cf4f5b3ecc78083',1,'SPIN']]],
-  ['example_20codes_1',['Example Codes',['../examplecode.html',1,'']]],
-  ['exceptions_2',['Exceptions',['../index.html',1,'']]],
-  ['exceptiontype_3',['ExceptionType',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4',1,'SPIN']]],
-  ['exceptiontype_2ehpp_4',['ExceptionType.hpp',['../ExceptionType_8hpp.html',1,'']]],
-  ['executionengineexception_5',['ExecutionEngineException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4af3871adee3fbf1ab6f5aed6c499aed82',1,'SPIN']]]
+  ['datamisalignedexception_0',['DataMisalignedException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4aea92b57677f8b30538ffbf4d847ba138',1,'SPIN']]],
+  ['directorynotfoundexception_1',['DirectoryNotFoundException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4a5a97d5c4efdc5427d861de2321efb3a9',1,'SPIN']]],
+  ['dividebyzeroexception_2',['DivideByZeroException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4acfdf01cc7d59077216583c99aeda02fb',1,'SPIN']]],
+  ['dllnotfoundexception_3',['DllNotFoundException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4a5118ad6d90b362bd6afb554a6fbf99a6',1,'SPIN']]],
+  ['drivenotfoundexception_4',['DriveNotFoundException',['../namespaceSPIN.html#a393da9356666fd88efd35f9584bed9f4ae26b225f41148d3bc104a37628a2385c',1,'SPIN']]]
 ];
