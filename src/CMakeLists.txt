@@ -51,3 +51,4 @@ set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/NotImplementedException.c
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/NotSupportedException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/NullReferenceException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/ObjectDisposedException.cpp;${SPIN_Exceptions_SRC_CXX}")
+set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/OperationCanceledException.cpp;${SPIN_Exceptions_SRC_CXX}")
