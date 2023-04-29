@@ -24,15 +24,35 @@ cmake_minimum_required(VERSION 3.10)
 project(SPIN-Exceptions VERSION 0.1.5)
 
 include_directories("${CMAKE_CURRENT_LIST_DIR}/include/public")
+include_directories("${CMAKE_CURRENT_LIST_DIR}/include/private")
 
-add_library("SPIN-Exceptions" INTERFACE)
+include("${CMAKE_CURRENT_LIST_DIR}/src/CMakeLists.txt")
 
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/"
-        DESTINATION "include"
-        FILES_MATCHING
-        PATTERN "*.hpp")
+add_library("SPIN-Exceptions_shared" SHARED "${SPIN_Exceptions_SRC_CXX};${SPIN_Exceptions_SRC_C}")
+add_library("SPIN-Exceptions_static" STATIC "${SPIN_Exceptions_SRC_CXX};${SPIN_Exceptions_SRC_C}")
 
-install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/"
+if (NOT WIN32)
+    set_target_properties("SPIN-Exceptions_shared" PROPERTIES OUTPUT_NAME SPIN-Exceptions)
+    set_target_properties("SPIN-Exceptions_static" PROPERTIES OUTPUT_NAME SPIN-Exceptions)
+endif()
+
+target_include_directories("SPIN-Exceptions_shared" PUBLIC "${CMAKE_CURRENT_LIST_DIR}/include/public")
+target_include_directories("SPIN-Exceptions_static" PUBLIC "${CMAKE_CURRENT_LIST_DIR}/include/public")
+
+install (TARGETS "SPIN-Exceptions_shared"
+         ARCHIVE DESTINATION lib
+         LIBRARY DESTINATION lib)
+
+install (TARGETS "SPIN-Exceptions_static"
+         ARCHIVE DESTINATION lib
+         LIBRARY DESTINATION lib)
+
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/public/"
         DESTINATION "include"
         FILES_MATCHING
         PATTERN "*.h")
+
+install(DIRECTORY "${CMAKE_SOURCE_DIR}/include/public/"
+        DESTINATION "include"
+        FILES_MATCHING
+        PATTERN "*.hpp")
