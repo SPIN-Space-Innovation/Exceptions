@@ -44,3 +44,4 @@ set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/InvalidTimeZoneException.
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/MemberAccessException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/MethodAccessException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/MissingFieldException.cpp;${SPIN_Exceptions_SRC_CXX}")
+set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/MissingMemberException.cpp;${SPIN_Exceptions_SRC_CXX}")
