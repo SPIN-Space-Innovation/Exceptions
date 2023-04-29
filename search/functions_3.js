@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['operator_3d_0',['operator=',['../classSPIN_1_1Exception.html#a08a8e03f15a177dfa1dc68f542b728e6',1,'SPIN::Exception::operator=(const SPIN::Exception &amp;exception)'],['../classSPIN_1_1Exception.html#af98217c75b17e575db989950e383b5af',1,'SPIN::Exception::operator=(SPIN::Exception &amp;&amp;exception)']]]
+  ['exception_0',['Exception',['../classSPIN_1_1Exception.html#a4638cb8e1b2f8c7ca0ea51409573dded',1,'SPIN::Exception::Exception()=default'],['../classSPIN_1_1Exception.html#aa28a47ef879759ab6d12532273b885cb',1,'SPIN::Exception::Exception(const SPIN::Exception &amp;exception)'],['../classSPIN_1_1Exception.html#a1f58183d2fa61b96a9eb80bad736f1f6',1,'SPIN::Exception::Exception(SPIN::Exception &amp;&amp;exception)']]],
+  ['executionengineexception_1',['ExecutionEngineException',['../classSPIN_1_1ExecutionEngineException.html#ad6b77d61065e3cc6b8e7dd5bcc9e049a',1,'SPIN::ExecutionEngineException']]]
 ];
