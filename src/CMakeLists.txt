@@ -37,3 +37,4 @@ set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/ExecutionEngineException.
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/FieldAccessException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/FormatException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/IndexOutOfRangeException.cpp;${SPIN_Exceptions_SRC_CXX}")
+set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/InsufficientMemoryException.cpp;${SPIN_Exceptions_SRC_CXX}")
