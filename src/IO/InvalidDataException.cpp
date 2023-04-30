@@ -23,15 +23,15 @@
  * \endif
  */
 
-#include "SPIN/FileNotFoundException.hpp"
+#include "SPIN/IO/InvalidDataException.hpp"
 
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
+#include "SPIN/IO/IOException.hpp"
 
-SPIN::FileNotFoundException::FileNotFoundException(std::string message) : SPIN::IOException::IOException(message)
+SPIN::IO::InvalidDataException::InvalidDataException(std::string message) : SPIN::IO::IOException::IOException(message)
 {
-    this->_exceptionType = SPIN::ExceptionType::FileNotFoundException;
-    this->_exceptionTypeString = "System.IO.FileNotFoundException";
+    this->_exceptionType = SPIN::ExceptionType::InvalidDataException;
+    this->_exceptionTypeString = "System.IO.InvalidDataException";
 }

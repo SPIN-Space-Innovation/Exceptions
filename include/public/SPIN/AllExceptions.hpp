@@ -71,12 +71,12 @@
 #include <SPIN/UnauthorizedAccessException.hpp>
 #include <SPIN/UriFormatException.hpp>
 
-#include <SPIN/IOException.hpp>
-#include <SPIN/DirectoryNotFoundException.hpp>
-#include <SPIN/DriveNotFoundException.hpp>
-#include <SPIN/EndOfStreamException.hpp>
-#include <SPIN/FileFormatException.hpp>
-#include <SPIN/FileNotFoundException.hpp>
-#include <SPIN/InternalBufferOverflowException.hpp>
-#include <SPIN/InvalidDataException.hpp>
-#include <SPIN/PathTooLongException.hpp>
+#include <SPIN/IO/IOException.hpp>
+#include <SPIN/IO/DirectoryNotFoundException.hpp>
+#include <SPIN/IO/DriveNotFoundException.hpp>
+#include <SPIN/IO/EndOfStreamException.hpp>
+#include <SPIN/IO/FileFormatException.hpp>
+#include <SPIN/IO/FileNotFoundException.hpp>
+#include <SPIN/IO/InternalBufferOverflowException.hpp>
+#include <SPIN/IO/InvalidDataException.hpp>
+#include <SPIN/IO/PathTooLongException.hpp>

@@ -23,15 +23,18 @@
  * \endif
  */
 
-#include "SPIN/DirectoryNotFoundException.hpp"
+#pragma once
 
 #include <string>
 
-#include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IO/IOException.hpp>
 
-SPIN::DirectoryNotFoundException::DirectoryNotFoundException(std::string message) : SPIN::IOException::IOException(message)
+namespace SPIN::IO
 {
-    this->_exceptionType = SPIN::ExceptionType::DirectoryNotFoundException;
-    this->_exceptionTypeString = "System.IO.DirectoryNotFoundException";
+    class PathTooLongException : public SPIN::IO::IOException
+    {
+        public:
+            PathTooLongException(std::string message);
+    };
 }

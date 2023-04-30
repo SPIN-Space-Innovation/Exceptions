@@ -23,15 +23,18 @@
  * \endif
  */
 
-#include "SPIN/PathTooLongException.hpp"
+#pragma once
 
 #include <string>
 
-#include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IO/IOException.hpp>
 
-SPIN::PathTooLongException::PathTooLongException(std::string message) : SPIN::IOException::IOException(message)
+namespace SPIN::IO
 {
-    this->_exceptionType = SPIN::ExceptionType::PathTooLongException;
-    this->_exceptionTypeString = "System.IO.PathTooLongException";
+    class FileFormatException : public SPIN::IO::IOException
+    {
+        public:
+            FileFormatException(std::string message);
+    };
 }

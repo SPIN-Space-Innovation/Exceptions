@@ -27,14 +27,14 @@
 
 #include <string>
 
-#include <SPIN/ExceptionType.hpp>
-#include <SPIN/IOException.hpp>
+#include "SPIN/Exception.hpp"
+#include "SPIN/ExceptionType.hpp"
 
-namespace SPIN
+namespace SPIN::IO
 {
-    class InternalBufferOverflowException : public SPIN::IOException
+    class IOException : public SPIN::Exception
     {
         public:
-            InternalBufferOverflowException(std::string message);
+            IOException(std::string message);
     };
 }

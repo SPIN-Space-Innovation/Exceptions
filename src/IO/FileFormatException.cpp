@@ -23,15 +23,15 @@
  * \endif
  */
 
-#include "SPIN/EndOfStreamException.hpp"
+#include "SPIN/IO/FileFormatException.hpp"
 
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
+#include "SPIN/IO/IOException.hpp"
 
-SPIN::EndOfStreamException::EndOfStreamException(std::string message) : SPIN::IOException::IOException(message)
+SPIN::IO::FileFormatException::FileFormatException(std::string message) : SPIN::IO::IOException::IOException(message)
 {
-    this->_exceptionType = SPIN::ExceptionType::EndOfStreamException;
-    this->_exceptionTypeString = "System.IO.EndOfStreamException";
+    this->_exceptionType = SPIN::ExceptionType::FileFormatException;
+    this->_exceptionTypeString = "System.IO.FileFormatException";
 }

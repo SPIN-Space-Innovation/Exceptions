@@ -23,15 +23,15 @@
  * \endif
  */
 
-#include "SPIN/FileFormatException.hpp"
+#include "SPIN/IO/IOException.hpp"
 
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
 
-SPIN::FileFormatException::FileFormatException(std::string message) : SPIN::IOException::IOException(message)
+SPIN::IO::IOException::IOException(std::string message)
 {
-    this->_exceptionType = SPIN::ExceptionType::FileFormatException;
-    this->_exceptionTypeString = "System.IO.FileFormatException";
+    this->_exceptionType = SPIN::ExceptionType::IOException;
+    this->_exceptionTypeString = "System.IO.IOException";
+    this->_message = message;
 }

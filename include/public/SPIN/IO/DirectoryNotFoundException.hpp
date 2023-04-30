@@ -28,13 +28,13 @@
 #include <string>
 
 #include <SPIN/ExceptionType.hpp>
-#include <SPIN/IOException.hpp>
+#include <SPIN/IO/IOException.hpp>
 
-namespace SPIN
+namespace SPIN::IO
 {
-    class FileNotFoundException : public SPIN::IOException
+    class DirectoryNotFoundException : public SPIN::IO::IOException
     {
         public:
-            FileNotFoundException(std::string message);
+            DirectoryNotFoundException(std::string message);
     };
 }

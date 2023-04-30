@@ -23,15 +23,15 @@
  * \endif
  */
 
-#include "SPIN/InvalidDataException.hpp"
+#include "SPIN/IO/InternalBufferOverflowException.hpp"
 
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
+#include "SPIN/IO/IOException.hpp"
 
-SPIN::InvalidDataException::InvalidDataException(std::string message) : SPIN::IOException::IOException(message)
+SPIN::IO::InternalBufferOverflowException::InternalBufferOverflowException(std::string message) : SPIN::IO::IOException::IOException(message)
 {
-    this->_exceptionType = SPIN::ExceptionType::InvalidDataException;
-    this->_exceptionTypeString = "System.IO.InvalidDataException";
+    this->_exceptionType = SPIN::ExceptionType::InternalBufferOverflowException;
+    this->_exceptionTypeString = "System.IO.InternalBufferOverflowException";
 }

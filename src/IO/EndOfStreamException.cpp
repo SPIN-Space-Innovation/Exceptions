@@ -23,18 +23,15 @@
  * \endif
  */
 
-#pragma once
+#include "SPIN/IO/EndOfStreamException.hpp"
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IO/IOException.hpp"
 
-namespace SPIN
+SPIN::IO::EndOfStreamException::EndOfStreamException(std::string message) : SPIN::IO::IOException::IOException(message)
 {
-    class IOException : public SPIN::Exception
-    {
-        public:
-            IOException(std::string message);
-    };
+    this->_exceptionType = SPIN::ExceptionType::EndOfStreamException;
+    this->_exceptionTypeString = "System.IO.EndOfStreamException";
 }

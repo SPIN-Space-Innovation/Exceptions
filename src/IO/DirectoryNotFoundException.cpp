@@ -23,18 +23,15 @@
  * \endif
  */
 
-#pragma once
+#include "SPIN/IO/DirectoryNotFoundException.hpp"
 
 #include <string>
 
-#include <SPIN/ExceptionType.hpp>
-#include <SPIN/IOException.hpp>
+#include "SPIN/ExceptionType.hpp"
+#include "SPIN/IO/IOException.hpp"
 
-namespace SPIN
+SPIN::IO::DirectoryNotFoundException::DirectoryNotFoundException(std::string message) : SPIN::IO::IOException::IOException(message)
 {
-    class EndOfStreamException : public SPIN::IOException
-    {
-        public:
-            EndOfStreamException(std::string message);
-    };
+    this->_exceptionType = SPIN::ExceptionType::DirectoryNotFoundException;
+    this->_exceptionTypeString = "System.IO.DirectoryNotFoundException";
 }

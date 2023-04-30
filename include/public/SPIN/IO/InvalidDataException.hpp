@@ -23,15 +23,18 @@
  * \endif
  */
 
-#include "SPIN/DriveNotFoundException.hpp"
+#pragma once
 
 #include <string>
 
-#include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IO/IOException.hpp>
 
-SPIN::DriveNotFoundException::DriveNotFoundException(std::string message) : SPIN::IOException::IOException(message)
+namespace SPIN::IO
 {
-    this->_exceptionType = SPIN::ExceptionType::DriveNotFoundException;
-    this->_exceptionTypeString = "System.IO.DriveNotFoundException";
+    class InvalidDataException : public SPIN::IO::IOException
+    {
+        public:
+            InvalidDataException(std::string message);
+    };
 }

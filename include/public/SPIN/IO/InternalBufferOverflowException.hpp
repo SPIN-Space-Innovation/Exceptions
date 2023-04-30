@@ -23,15 +23,18 @@
  * \endif
  */
 
-#include "SPIN/InternalBufferOverflowException.hpp"
+#pragma once
 
 #include <string>
 
-#include "SPIN/ExceptionType.hpp"
-#include "SPIN/IOException.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IO/IOException.hpp>
 
-SPIN::InternalBufferOverflowException::InternalBufferOverflowException(std::string message) : SPIN::IOException::IOException(message)
+namespace SPIN::IO
 {
-    this->_exceptionType = SPIN::ExceptionType::InternalBufferOverflowException;
-    this->_exceptionTypeString = "System.IO.InternalBufferOverflowException";
+    class InternalBufferOverflowException : public SPIN::IO::IOException
+    {
+        public:
+            InternalBufferOverflowException(std::string message);
+    };
 }

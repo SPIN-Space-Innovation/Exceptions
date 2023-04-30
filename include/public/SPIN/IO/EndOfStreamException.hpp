@@ -28,13 +28,13 @@
 #include <string>
 
 #include <SPIN/ExceptionType.hpp>
-#include <SPIN/IOException.hpp>
+#include <SPIN/IO/IOException.hpp>
 
-namespace SPIN
+namespace SPIN::IO
 {
-    class DriveNotFoundException : public SPIN::IOException
+    class EndOfStreamException : public SPIN::IO::IOException
     {
         public:
-            DriveNotFoundException(std::string message);
+            EndOfStreamException(std::string message);
     };
 }

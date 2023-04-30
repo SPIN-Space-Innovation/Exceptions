@@ -23,18 +23,15 @@
  * \endif
  */
 
-#pragma once
+#include "SPIN/IO/FileNotFoundException.hpp"
 
 #include <string>
 
-#include <SPIN/ExceptionType.hpp>
-#include <SPIN/IOException.hpp>
+#include "SPIN/ExceptionType.hpp"
+#include "SPIN/IO/IOException.hpp"
 
-namespace SPIN
+SPIN::IO::FileNotFoundException::FileNotFoundException(std::string message) : SPIN::IO::IOException::IOException(message)
 {
-    class PathTooLongException : public SPIN::IOException
-    {
-        public:
-            PathTooLongException(std::string message);
-    };
+    this->_exceptionType = SPIN::ExceptionType::FileNotFoundException;
+    this->_exceptionTypeString = "System.IO.FileNotFoundException";
 }

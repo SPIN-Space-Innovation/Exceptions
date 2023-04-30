@@ -23,15 +23,15 @@
  * \endif
  */
 
-#include "SPIN/IOException.hpp"
+#include "SPIN/IO/DriveNotFoundException.hpp"
 
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IO/IOException.hpp"
 
-SPIN::IOException::IOException(std::string message)
+SPIN::IO::DriveNotFoundException::DriveNotFoundException(std::string message) : SPIN::IO::IOException::IOException(message)
 {
-    this->_exceptionType = SPIN::ExceptionType::IOException;
-    this->_exceptionTypeString = "System.IO.IOException";
-    this->_message = message;
+    this->_exceptionType = SPIN::ExceptionType::DriveNotFoundException;
+    this->_exceptionTypeString = "System.IO.DriveNotFoundException";
 }
