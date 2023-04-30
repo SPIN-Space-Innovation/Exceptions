@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::UriFormatException::UriFormatException(std::string message)
+SPIN::UriFormatException::UriFormatException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::UriFormatException;
     this->_exceptionTypeString = "System.UriFormatException";
-    this->_message = message;
 }

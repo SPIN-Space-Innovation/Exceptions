@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::ObjectDisposedException::ObjectDisposedException(std::string message)
+SPIN::ObjectDisposedException::ObjectDisposedException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::ObjectDisposedException;
     this->_exceptionTypeString = "System.ObjectDisposedException";
-    this->_message = message;
 }

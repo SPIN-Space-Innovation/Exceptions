@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::FieldAccessException::FieldAccessException(std::string message)
+SPIN::FieldAccessException::FieldAccessException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::FieldAccessException;
     this->_exceptionTypeString = "System.FieldAccessException";
-    this->_message = message;
 }

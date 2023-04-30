@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::OperationCanceledException::OperationCanceledException(std::string message)
+SPIN::OperationCanceledException::OperationCanceledException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::OperationCanceledException;
     this->_exceptionTypeString = "System.OperationCanceledException";
-    this->_message = message;
 }

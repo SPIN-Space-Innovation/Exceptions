@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::DllNotFoundException::DllNotFoundException(std::string message)
+SPIN::DllNotFoundException::DllNotFoundException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::DllNotFoundException;
     this->_exceptionTypeString = "System.DllNotFoundException";
-    this->_message = message;
 }

@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class InvalidTimeZoneException : public SPIN::Exception
+    class InvalidTimeZoneException : public SPIN::SystemException
     {
         public:
             InvalidTimeZoneException(std::string message);

@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::TypeInitializationException::TypeInitializationException(std::string message)
+SPIN::TypeInitializationException::TypeInitializationException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::TypeInitializationException;
     this->_exceptionTypeString = "System.TypeInitializationException";
-    this->_message = message;
 }

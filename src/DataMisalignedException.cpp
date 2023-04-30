@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::DataMisalignedException::DataMisalignedException(std::string message)
+SPIN::DataMisalignedException::DataMisalignedException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::DataMisalignedException;
     this->_exceptionTypeString = "System.DataMisalignedException";
-    this->_message = message;
 }

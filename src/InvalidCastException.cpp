@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::InvalidCastException::InvalidCastException(std::string message)
+SPIN::InvalidCastException::InvalidCastException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::InvalidCastException;
     this->_exceptionTypeString = "System.InvalidCastException";
-    this->_message = message;
 }

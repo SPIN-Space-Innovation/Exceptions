@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::MissingFieldException::MissingFieldException(std::string message)
+SPIN::MissingFieldException::MissingFieldException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::MissingFieldException;
     this->_exceptionTypeString = "System.MissingFieldException";
-    this->_message = message;
 }

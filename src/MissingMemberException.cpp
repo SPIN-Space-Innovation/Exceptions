@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::MissingMemberException::MissingMemberException(std::string message)
+SPIN::MissingMemberException::MissingMemberException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::MissingMemberException;
     this->_exceptionTypeString = "System.MissingMemberException";
-    this->_message = message;
 }

@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::DivideByZeroException::DivideByZeroException(std::string message)
+SPIN::DivideByZeroException::DivideByZeroException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::DivideByZeroException;
     this->_exceptionTypeString = "System.DivideByZeroException";
-    this->_message = message;
 }

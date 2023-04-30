@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class IndexOutOfRangeException : public SPIN::Exception
+    class IndexOutOfRangeException : public SPIN::SystemException
     {
         public:
             IndexOutOfRangeException(std::string message);

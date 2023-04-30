@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class UnauthorizedAccessException : public SPIN::Exception
+    class UnauthorizedAccessException : public SPIN::SystemException
     {
         public:
             UnauthorizedAccessException(std::string message);

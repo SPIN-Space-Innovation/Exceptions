@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class ArgumentOutOfRangeException : public SPIN::Exception
+    class ArgumentOutOfRangeException : public SPIN::SystemException
     {
         public:
             ArgumentOutOfRangeException(std::string message);

@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class PlatformNotSupportedException : public SPIN::Exception
+    class PlatformNotSupportedException : public SPIN::SystemException
     {
         public:
             PlatformNotSupportedException(std::string message);

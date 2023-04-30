@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::TimeoutException::TimeoutException(std::string message)
+SPIN::TimeoutException::TimeoutException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::TimeoutException;
     this->_exceptionTypeString = "System.TimeoutException";
-    this->_message = message;
 }

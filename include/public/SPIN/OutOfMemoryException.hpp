@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class OutOfMemoryException : public SPIN::Exception
+    class OutOfMemoryException : public SPIN::SystemException
     {
         public:
             OutOfMemoryException(std::string message);

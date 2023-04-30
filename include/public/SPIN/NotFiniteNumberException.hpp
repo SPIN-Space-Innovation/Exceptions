@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class NotFiniteNumberException : public SPIN::Exception
+    class NotFiniteNumberException : public SPIN::SystemException
     {
         public:
             NotFiniteNumberException(std::string message);

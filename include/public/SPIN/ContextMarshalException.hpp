@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class ContextMarshalException : public SPIN::Exception
+    class ContextMarshalException : public SPIN::SystemException
     {
         public:
             ContextMarshalException(std::string message);

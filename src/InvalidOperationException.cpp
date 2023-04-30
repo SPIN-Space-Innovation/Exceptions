@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::InvalidOperationException::InvalidOperationException(std::string message)
+SPIN::InvalidOperationException::InvalidOperationException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::InvalidOperationException;
     this->_exceptionTypeString = "System.InvalidOperationException";
-    this->_message = message;
 }

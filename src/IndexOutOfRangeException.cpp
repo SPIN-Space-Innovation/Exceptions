@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::IndexOutOfRangeException::IndexOutOfRangeException(std::string message)
+SPIN::IndexOutOfRangeException::IndexOutOfRangeException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::IndexOutOfRangeException;
     this->_exceptionTypeString = "System.IndexOutOfRangeException";
-    this->_message = message;
 }

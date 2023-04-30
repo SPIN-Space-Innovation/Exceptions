@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::ApplicationException::ApplicationException(std::string message)
+SPIN::ApplicationException::ApplicationException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::ApplicationException;
     this->_exceptionTypeString = "System.ApplicationException";
-    this->_message = message;
 }

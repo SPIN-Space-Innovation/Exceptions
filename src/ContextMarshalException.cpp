@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::ContextMarshalException::ContextMarshalException(std::string message)
+SPIN::ContextMarshalException::ContextMarshalException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::ContextMarshalException;
     this->_exceptionTypeString = "System.ContextMarshalException";
-    this->_message = message;
 }

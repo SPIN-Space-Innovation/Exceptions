@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class StackOverflowException : public SPIN::Exception
+    class StackOverflowException : public SPIN::SystemException
     {
         public:
             StackOverflowException(std::string message);

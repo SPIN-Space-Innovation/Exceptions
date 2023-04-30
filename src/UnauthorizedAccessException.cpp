@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::UnauthorizedAccessException::UnauthorizedAccessException(std::string message)
+SPIN::UnauthorizedAccessException::UnauthorizedAccessException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::UnauthorizedAccessException;
     this->_exceptionTypeString = "System.UnauthorizedAccessException";
-    this->_message = message;
 }

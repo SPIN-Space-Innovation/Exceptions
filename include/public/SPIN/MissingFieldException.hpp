@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class MissingFieldException : public SPIN::Exception
+    class MissingFieldException : public SPIN::SystemException
     {
         public:
             MissingFieldException(std::string message);

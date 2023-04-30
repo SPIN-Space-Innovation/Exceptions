@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::TimeZoneNotFoundException::TimeZoneNotFoundException(std::string message)
+SPIN::TimeZoneNotFoundException::TimeZoneNotFoundException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::TimeZoneNotFoundException;
     this->_exceptionTypeString = "System.TimeZoneNotFoundException";
-    this->_message = message;
 }

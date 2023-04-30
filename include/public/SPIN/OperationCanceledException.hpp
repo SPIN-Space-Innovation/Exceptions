@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class OperationCanceledException : public SPIN::Exception
+    class OperationCanceledException : public SPIN::SystemException
     {
         public:
             OperationCanceledException(std::string message);

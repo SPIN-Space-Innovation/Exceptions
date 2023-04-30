@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class MethodAccessException : public SPIN::Exception
+    class MethodAccessException : public SPIN::SystemException
     {
         public:
             MethodAccessException(std::string message);

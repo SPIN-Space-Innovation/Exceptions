@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class DivideByZeroException : public SPIN::Exception
+    class DivideByZeroException : public SPIN::SystemException
     {
         public:
             DivideByZeroException(std::string message);

@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class ObjectDisposedException : public SPIN::Exception
+    class ObjectDisposedException : public SPIN::SystemException
     {
         public:
             ObjectDisposedException(std::string message);

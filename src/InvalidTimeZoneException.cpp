@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::InvalidTimeZoneException::InvalidTimeZoneException(std::string message)
+SPIN::InvalidTimeZoneException::InvalidTimeZoneException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::InvalidTimeZoneException;
     this->_exceptionTypeString = "System.InvalidTimeZoneException";
-    this->_message = message;
 }

@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::StackOverflowException::StackOverflowException(std::string message)
+SPIN::StackOverflowException::StackOverflowException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::StackOverflowException;
     this->_exceptionTypeString = "System.StackOverflowException";
-    this->_message = message;
 }

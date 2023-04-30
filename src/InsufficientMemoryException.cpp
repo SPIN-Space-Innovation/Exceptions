@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::InsufficientMemoryException::InsufficientMemoryException(std::string message)
+SPIN::InsufficientMemoryException::InsufficientMemoryException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::InsufficientMemoryException;
     this->_exceptionTypeString = "System.InsufficientMemoryException";
-    this->_message = message;
 }

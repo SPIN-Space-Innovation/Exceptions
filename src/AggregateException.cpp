@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::AggregateException::AggregateException(std::string message)
+SPIN::AggregateException::AggregateException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::AggregateException;
     this->_exceptionTypeString = "System.AggregateException";
-    this->_message = message;
 }

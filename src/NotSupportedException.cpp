@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::NotSupportedException::NotSupportedException(std::string message)
+SPIN::NotSupportedException::NotSupportedException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::NotSupportedException;
     this->_exceptionTypeString = "System.NotSupportedException";
-    this->_message = message;
 }

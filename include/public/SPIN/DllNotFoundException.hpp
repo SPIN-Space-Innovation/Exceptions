@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class DllNotFoundException : public SPIN::Exception
+    class DllNotFoundException : public SPIN::SystemException
     {
         public:
             DllNotFoundException(std::string message);

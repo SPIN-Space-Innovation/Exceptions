@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/SystemException.hpp"
 
-SPIN::NotFiniteNumberException::NotFiniteNumberException(std::string message)
+SPIN::NotFiniteNumberException::NotFiniteNumberException(std::string message) : SPIN::SystemException::SystemException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::NotFiniteNumberException;
     this->_exceptionTypeString = "System.NotFiniteNumberException";
-    this->_message = message;
 }

@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class NullReferenceException : public SPIN::Exception
+    class NullReferenceException : public SPIN::SystemException
     {
         public:
             NullReferenceException(std::string message);

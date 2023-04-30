@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/SystemException.hpp>
 
 namespace SPIN
 {
-    class TimeoutException : public SPIN::Exception
+    class TimeoutException : public SPIN::SystemException
     {
         public:
             TimeoutException(std::string message);
