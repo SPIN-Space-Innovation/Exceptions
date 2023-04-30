@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IOException.hpp"
 
-SPIN::EndOfStreamException::EndOfStreamException(std::string message)
+SPIN::EndOfStreamException::EndOfStreamException(std::string message) : SPIN::IOException::IOException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::EndOfStreamException;
     this->_exceptionTypeString = "System.IO.EndOfStreamException";
-    this->_message = message;
 }

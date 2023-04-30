@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IOException.hpp"
 
-SPIN::InvalidDataException::InvalidDataException(std::string message)
+SPIN::InvalidDataException::InvalidDataException(std::string message) : SPIN::IOException::IOException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::InvalidDataException;
     this->_exceptionTypeString = "System.IO.InvalidDataException";
-    this->_message = message;
 }

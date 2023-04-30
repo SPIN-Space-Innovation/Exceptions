@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IOException.hpp>
 
 namespace SPIN
 {
-    class FileNotFoundException : public SPIN::Exception
+    class FileNotFoundException : public SPIN::IOException
     {
         public:
             FileNotFoundException(std::string message);

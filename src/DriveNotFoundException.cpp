@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IOException.hpp"
 
-SPIN::DriveNotFoundException::DriveNotFoundException(std::string message)
+SPIN::DriveNotFoundException::DriveNotFoundException(std::string message) : SPIN::IOException::IOException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::DriveNotFoundException;
     this->_exceptionTypeString = "System.IO.DriveNotFoundException";
-    this->_message = message;
 }

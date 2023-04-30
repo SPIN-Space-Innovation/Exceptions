@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IOException.hpp>
 
 namespace SPIN
 {
-    class PathTooLongException : public SPIN::Exception
+    class PathTooLongException : public SPIN::IOException
     {
         public:
             PathTooLongException(std::string message);

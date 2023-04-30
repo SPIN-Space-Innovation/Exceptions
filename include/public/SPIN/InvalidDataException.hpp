@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IOException.hpp>
 
 namespace SPIN
 {
-    class InvalidDataException : public SPIN::Exception
+    class InvalidDataException : public SPIN::IOException
     {
         public:
             InvalidDataException(std::string message);

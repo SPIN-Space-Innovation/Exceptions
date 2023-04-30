@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IOException.hpp"
 
-SPIN::DirectoryNotFoundException::DirectoryNotFoundException(std::string message)
+SPIN::DirectoryNotFoundException::DirectoryNotFoundException(std::string message) : SPIN::IOException::IOException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::DirectoryNotFoundException;
     this->_exceptionTypeString = "System.IO.DirectoryNotFoundException";
-    this->_message = message;
 }

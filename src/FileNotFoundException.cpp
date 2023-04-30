@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IOException.hpp"
 
-SPIN::FileNotFoundException::FileNotFoundException(std::string message)
+SPIN::FileNotFoundException::FileNotFoundException(std::string message) : SPIN::IOException::IOException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::FileNotFoundException;
     this->_exceptionTypeString = "System.IO.FileNotFoundException";
-    this->_message = message;
 }

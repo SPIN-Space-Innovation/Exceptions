@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IOException.hpp>
 
 namespace SPIN
 {
-    class EndOfStreamException : public SPIN::Exception
+    class EndOfStreamException : public SPIN::IOException
     {
         public:
             EndOfStreamException(std::string message);

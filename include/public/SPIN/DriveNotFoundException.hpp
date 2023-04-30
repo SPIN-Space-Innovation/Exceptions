@@ -27,12 +27,12 @@
 
 #include <string>
 
-#include "SPIN/Exception.hpp"
-#include "SPIN/ExceptionType.hpp"
+#include <SPIN/ExceptionType.hpp>
+#include <SPIN/IOException.hpp>
 
 namespace SPIN
 {
-    class DriveNotFoundException : public SPIN::Exception
+    class DriveNotFoundException : public SPIN::IOException
     {
         public:
             DriveNotFoundException(std::string message);

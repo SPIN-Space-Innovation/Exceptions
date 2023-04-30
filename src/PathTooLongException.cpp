@@ -28,10 +28,10 @@
 #include <string>
 
 #include "SPIN/ExceptionType.hpp"
+#include "SPIN/IOException.hpp"
 
-SPIN::PathTooLongException::PathTooLongException(std::string message)
+SPIN::PathTooLongException::PathTooLongException(std::string message) : SPIN::IOException::IOException(message)
 {
     this->_exceptionType = SPIN::ExceptionType::PathTooLongException;
     this->_exceptionTypeString = "System.IO.PathTooLongException";
-    this->_message = message;
 }
