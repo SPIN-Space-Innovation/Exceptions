@@ -68,3 +68,4 @@ set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/DriveNotFoundException.cp
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/EndOfStreamException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/FileFormatException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/FileNotFoundException.cpp;${SPIN_Exceptions_SRC_CXX}")
+set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/InternalBufferOverflowException.cpp;${SPIN_Exceptions_SRC_CXX}")
