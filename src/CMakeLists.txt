@@ -55,3 +55,4 @@ set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/OperationCanceledExceptio
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/OutOfMemoryException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/OverflowException.cpp;${SPIN_Exceptions_SRC_CXX}")
 set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/PlatformNotSupportedException.cpp;${SPIN_Exceptions_SRC_CXX}")
+set(SPIN_Exceptions_SRC_CXX "${CMAKE_CURRENT_LIST_DIR}/StackOverflowException.cpp;${SPIN_Exceptions_SRC_CXX}")
